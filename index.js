@@ -10,10 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(errorHandler)
 
-app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from this origin
-    credentials: true, // Enable credentials (cookies, authorization headers, etc.)
-}));
+app.use(cors());
 
 const PORT = process.env.PORT || 5000
 
