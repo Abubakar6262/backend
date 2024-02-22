@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(errorHandler)
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from this origin
+    origin: process.env.FRONTEND_URL, // Allow requests from this origin
     credentials: true, // Enable credentials (cookies, authorization headers, etc.)
 }));
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8080
 
 try {
     connectDB();
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 // route for user
 app.use('/api/auth', userRoute)
 // invetory routes
-app.use('/api',inventoryRoutes )
+app.use('/api', inventoryRoutes)
 
 
 
