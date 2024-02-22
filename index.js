@@ -35,4 +35,4 @@ app.get('/', (req, res) => {
 // route for user
 app.use('/api/auth', userRoute)
 // invetory routes
-app.use('/api', inventoryRoutes)
+app.use('/api',inventoryRoutes )
