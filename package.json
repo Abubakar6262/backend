@@ -6,7 +6,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "node backend/Server.js"
+    "start": "node backend/index.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
